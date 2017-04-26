@@ -1,12 +1,16 @@
 {
   "name": "angler",
-  "app_id": "",
+  "app_id": "d009368c",
   "v2": true,
   "typescript": true,
   "proxies": [
     {
       "path": "/api",
       "proxyUrl": "http://api.evang.dk/v1"
+    },
+    {
+      "path": "/weather",
+      "proxyUrl": "http://api.openweathermap.org/data/2.5"
     }
   ]
 }

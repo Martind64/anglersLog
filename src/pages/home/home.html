@@ -7,52 +7,10 @@
 </ion-header>
 
 <ion-content>
-
-      <ion-item>
-        <ion-label>Anglers Name</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.angler_name" name="anglers name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Date / Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="currentCatch.datetime" name="date / time"></ion-datetime>
-      </ion-item>
-      <ion-item>
-        <ion-label>Fishing Method</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.fishing_method" name="fishing method"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Breed</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.breed" name="breed"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Length</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.length" name="length"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Weight</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.weight" name="weight"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Weather</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.weather" name="weather"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Location</ion-label>
-        <ion-input type="text" [(ngModel)]="currentCatch.location" name="location"></ion-input>
-      </ion-item>
- <br>
  <div padding>
-      <button ion-button block color="secondary" padding (click)="addCatch()">Button</button>
+      <button ion-button block color="secondary" padding [navPush]="addcatchPage">Add Catch</button>
  </div>
  <div padding>
-      <button ion-button block color="secondary" padding (click)="log()">Button</button>
+      <button ion-button block color="secondary" padding [navPush]="showcatchesPage">Show Catches</button>
  </div>
- <br>
- <br>
-  <ion-list>
-    <ion-item *ngFor="let catch of catches">
-    {{catch.angler_name}}
-    {{catch.latitude}}
-    </ion-item>
-  </ion-list> 
 </ion-content>
