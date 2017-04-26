@@ -1,16 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
- <div padding>
-      <button ion-button block color="secondary" padding [navPush]="addcatchPage">Add Catch</button>
- </div>
- <div padding>
-      <button ion-button block color="secondary" padding [navPush]="showcatchesPage">Show Catches</button>
- </div>
+<ion-content class="card-background-page">
+<ion-grid>
+	<ion-row>
+		<ion-col>
+			<ion-card [navPush]="addcatchPage">
+			    <img src="img/addCatch.jpg">
+			    <div class="card-title">Add Catch</div>
+			  </ion-card>
+
+		  <ion-card [navPush]="showcatchesPage">
+		  	<img src="img/swarm.jpg">
+		  	<div class="card-title">Show Catches</div>
+		  </ion-card>
+		</ion-col>
+	</ion-row>
+	
+
+</ion-grid>
+
 </ion-content>

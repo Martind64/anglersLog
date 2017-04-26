@@ -16,6 +16,10 @@
 <ion-content>
    <ion-list>
     <ion-item (click)="selectCatch(catch)" *ngFor="let catch of catches">
+
+	<ion-thumbnail  item-right>
+		<img src="img/fish.png">
+	</ion-thumbnail>
     {{catch.angler_name}}
     <p>breed: {{catch.breed}}</p>
     <p>length: {{catch.length}}</p>
