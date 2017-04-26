@@ -23,7 +23,7 @@ export class ContactPage {
   	this.getCatches();
     this.loadMap();
   }
- 
+
 	 
 	loadMap(){
 	    this.geoloaction.getCurrentPosition().then((position) => {
@@ -64,7 +64,8 @@ export class ContactPage {
 				position: {lat: theCatch.latitude, lng: theCatch.longitude}
 
 			});
-				let content = "Caught by:" + theCatch.angler_name + "<br>Breed: "+theCatch.breed;
+				let content = "Caught by:" + theCatch.angler_name + "<br>Breed: "+ theCatch.breed + "<br>Weight: " + theCatch.weight
+				+ "<br>Date & Time: " + theCatch.datetime + "<br>Fishing Method: " + theCatch.fishing_method;
 				this.addInfoWindow(marker, content);
 			}
 		}
